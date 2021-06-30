@@ -1,0 +1,104 @@
+<div class="container">
+  <div class="addProductWrapper">
+    <div class="addProductBlock">
+
+      <div class="productSelectCategory productBlock">
+        <label for="productSelectCategory">Select category</label>
+        <select [(ngModel)]="selectedOption" name="selectedOption" >
+          <!-- <option value="1">Women</option>
+          <option value="2">Men</option>
+          <option value="3">Children</option> -->
+          <option *ngFor="let option of categoryOptions">
+            {{option.name}}
+          </option>
+        </select>
+      </div>
+
+      <div class="productNameBlock productBlock">
+        <label for="productName">Product Name </label>
+        <input type="text" name="productName" [(ngModel)]="productName" id="productName" placeholder="Product Name">
+      </div>
+
+      <div class="productPriceBlock productBlock">
+        <label for="productPrice">Product Price</label>
+        <input type="number" name="productPrice" [(ngModel)]="productPrice" id="productPrice"
+          placeholder="Product Price">
+      </div>
+
+      <div class="productDescriptionBlock productBlock">
+        <label for="productDescription">Product Description</label>
+        <input type="text" name="productDescription" [(ngModel)]="productDescription" id="productDescription"
+          placeholder="Product Description">
+      </div>
+
+      <!-- <div class="productFileBlock productBlock">
+        <label for="productFile">Product File</label>
+        <input type="file" name="productFile" id="productFile">
+      </div> -->
+
+      <div class="form-group row">
+        <div class="card-body">
+          <h5 class="card-title">Select a file for upload:</h5>
+          <!-- <input type="file" (change)="upload($event)" accept=".png,.jpg" /> -->
+          <input type="file" (change)="upload($event)" multiple accept=".png,.jpg" />
+          <!-- <br><br> -->
+          <!-- <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadProgress | async) + '%'" [attr.aria-valuenow]="(uploadProgress | async)" aria-valuemin="0" aria-valuemax="100"></div>
+          </div> -->
+          <!-- <br> -->
+          <div *ngIf="downloadURL | async; let downloadSrc" class="alert alert-info" role="alert">
+              File uploaded: <a [href]="downloadSrc">{{downloadSrc}}</a>
+          </div>
+          <br>
+          <!-- <div class="btn-group" role="group" *ngIf="uploadState | async; let state">
+              <button type="button" class="btn btn-primary" (click)="task.pause()" [disabled]="state === 'paused'">Pause</button>
+              <button type="button" class="btn btn-primary" (click)="task.cancel()" [disabled]="!(state === 'paused' || state === 'running')">Cancel</button>
+              <button type="button" class="btn btn-primary" (click)="task.resume()" [disabled]="state === 'running'">Resume</button>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="productBtnBlock" *ngIf="visibleAddBtnBlock">
+        <button (click)="addProduct()">Add Product</button>
+      </div>
+
+      <div class="productBtnBlock" *ngIf="visibleSaveBtnBlock">
+        <button (click)="saveEditedProduct()">Save Edited Product</button>
+      </div>
+
+    </div>
+    <hr>
+    <div class="productsList">
+      <table class="productTable">
+
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of adminProducts; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{p.name}}</td>
+            <td>{{p.price}}</td>
+            <td>{{p.description}}</td>
+            <td>{{p.categoryName}}</td>
+            <td>
+              <input type="button" (click)="editProduct(p)" value="Edit">
+            </td>
+            <td>
+              <input type="button" (click)="deleteProduct(p)" value="Delete">
+            </td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>

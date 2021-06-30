@@ -1,0 +1,103 @@
+  .intoTrendsWrapper {
+    margin: 150px auto;
+    max-width: 1600px;
+    height: 1000px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../../../../assets/img/home/bgGirl.png');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .textBlock {
+      text-align: center;
+
+      h2 {
+        color: #fff;
+        font-size: 100px;
+        line-height: 95%;
+        text-transform: uppercase;
+        font-family: "SaolRegular";
+        font-weight: normal;
+
+        .italicFont {
+          text-transform: none;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    .intoTrendsWrapper {
+      height: 900px;
+    }
+  }
+
+  @media screen and (max-width: 740px) {
+    .intoTrendsWrapper {
+      height: 770px;
+      margin: 100px 0;
+
+      .textBlock {
+        h2 {
+          font-size: 85px;
+          line-height: 95%;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .intoTrendsWrapper {
+      height: 655px;
+
+      .textBlock {
+        h2 {
+          font-size: 65px;
+          line-height: 95%;
+        }
+      }
+    }
+  }
+
+
+  @media screen and (max-width: 500px) {
+    .intoTrendsWrapper {
+      height: 525px;
+      margin: 70px 0;
+
+      .textBlock {
+        h2 {
+          font-size: 54px;
+          line-height: 95%;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .intoTrendsWrapper {
+      height: 460px;
+
+      .textBlock {
+        h2 {
+          font-size: 45px;
+          line-height: 95%;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 330px) {
+    .intoTrendsWrapper {
+      height: 390px;
+
+      .textBlock {
+        h2 {
+          font-size: 40px;
+          line-height: 95%;
+        }
+      }
+    }
+  }

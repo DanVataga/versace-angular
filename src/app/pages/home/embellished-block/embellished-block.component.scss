@@ -1,0 +1,127 @@
+.embTitleWrapper {
+  margin-top: 100px;
+
+  .embTitleBlock {
+    h2 {
+      text-transform: uppercase;
+      font-family: "SaolRegular";
+      font-size: 60px;
+      line-height: 90%;
+      font-weight: 400;
+
+      span {
+        text-transform: none;
+      }
+    }
+  }
+}
+
+.embProdWrapper {
+  margin-top: 100px;
+
+  .embProdBlock {
+    display: flex;
+    // padding: 0 80px;
+    justify-content: space-between;
+
+    .embProd {
+      text-align: center;
+      cursor: pointer;
+
+      &:nth-child(2) {
+        margin: 0 70px;
+      }
+
+      .embProdTitleBlock {
+        text-transform: uppercase;
+        font-size: 16px;
+        line-height: 24px;
+        margin: 30px 0 7px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .embProdWrapper {
+    margin-top: 80px;
+
+    .embProdBlock {
+      padding: 0 15px;
+
+      .embProd {
+
+        &:nth-child(2) {
+          margin: 0 30px;
+        }
+
+        .embProdTitleBlock {
+          font-size: 14px;
+          line-height: 21px;
+          margin: 25px 0 4px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .embTitleWrapper {
+    margin-top: 70px;
+
+    .embTitleBlock {
+      h2 {
+        font-size: 50px;
+      }
+    }
+  }
+
+  .embProdWrapper {
+    margin-top: 60px;
+    overflow: scroll;
+
+    .embProdBlock {
+      padding: 0;
+      margin-right: -100%;
+      overflow: scroll;
+
+      .embProd {
+        .embProdTitleBlock {
+          font-size: 14px;
+          line-height: 21px;
+          margin: 25px 0 4px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .embTitleWrapper {
+    .embTitleBlock {
+      h2 {
+        font-size: 40px;
+      }
+    }
+  }
+
+  .embProdWrapper {
+    margin-top: 35px;
+    overflow: scroll;
+
+    .embProdBlock {
+      margin-right: -100%;
+      justify-content: unset;
+
+      .embProd {
+        width: 223px;
+
+        .embProdTitleBlock {
+          font-size: 14px;
+          line-height: 21px;
+          margin: 25px 0 4px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+.womensClothingHeading {
+  max-width: 1400px;
+  margin: 0 auto;
+
+  .womenClothingTitleWrapper {
+    width: 100%;
+    margin-bottom: -100px;
+    position: relative;
+    z-index: 1;
+
+    .womenClothingTitleBlock {
+
+      max-width: 900px;
+      text-align: center;
+      margin: 70px auto;
+
+      h1 {
+        text-transform: uppercase;
+        font-family: "SaolLightRegular";
+        font-size: 90px;
+        line-height: 90%;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .womenClothingImgBlock {
+
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .womensClothingHeading {
+    .womenClothingTitleWrapper {
+      margin-bottom: -65px;
+
+      .womenClothingTitleBlock {
+        margin: 55px auto;
+
+        h1 {
+          font-size: 55px;
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  .womensClothingHeading {
+    .womenClothingTitleWrapper {
+      .womenClothingTitleBlock {
+        h1 {
+          font-size: 47px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .womensClothingHeading {
+    .womenClothingTitleWrapper {
+      margin-bottom: -78px;
+
+      .womenClothingTitleBlock {
+        h1 {
+          font-size: 40px;
+
+        }
+      }
+    }
+  }
+}

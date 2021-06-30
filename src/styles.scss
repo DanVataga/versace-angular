@@ -1,0 +1,377 @@
+// Poppins font
+@font-face {
+  font-family: "PoppinsRegular";
+  src:
+    url(./assets/fonts/PoppinsRegular/Poppins.woff2) format("woff2"),
+    url(./assets/fonts/PoppinsRegular/Poppins.woff) format("woff"),
+    url(./assets/fonts/PoppinsRegular/Poppins.ttf) format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "PoppinsLightRegular";
+  src:
+    url(./assets/fonts/PoppinsLightRegular/PoppinsLight.woff2) format("woff2"),
+    url(./assets/fonts/PoppinsLightRegular/PoppinsLight.woff) format("woff"),
+    url(./assets/fonts/PoppinsLightRegular/PoppinsLight.ttf) format("truetype");
+  font-weight: 300;
+}
+
+//Saol Display font
+
+@font-face {
+  font-family: "SaolRegular";
+  src:
+    url(./assets/fonts/SaolRegular/SaolDisplay-Regular.woff2) format("woff2"),
+    url(./assets/fonts/SaolRegular/SaolDisplay-Regular.woff) format("woff"),
+    url(./assets/fonts/SaolRegular/SaolDisplay-Regular.ttf) format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "SaolLightRegular";
+  src:
+    url(./assets/fonts/SaolLightRegular/SaolDisplay-Light.woff2) format("woff2"),
+    url(./assets/fonts/SaolLightRegular/SaolDisplay-Light.woff) format("woff"),
+    url(./assets/fonts/SaolLightRegular/SaolDisplay-Light.ttf) format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "SaolLightItalic";
+  src:
+    url(./assets/fonts/SaolLightItalic/SaolDisplay-LightItalic.woff2) format("woff2"),
+    url(./assets/fonts/SaolLightItalic/SaolDisplay-LightItalic.woff) format("woff"),
+    url(./assets/fonts/SaolLightItalic/SaolDisplay-LightItalic.ttf) format("truetype");
+  font-weight: 300;
+}
+
+//Reset styles
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li {
+  margin: 0;
+}
+
+body {
+  font-family: "PoppinsRegular";
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+button,
+input[type="button"] {
+  border: 1px solid #000;
+  background: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 100%;
+  transition: all .3s ease;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background-color: #000;
+    color: #fff;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+// Global styles
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  transition: all .5s ease;
+}
+
+.container {
+  max-width: 1400px;
+  padding: 0 20px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.orderedProd, .wishedProd {
+  width: 100%;
+  display: flex;
+  height: 200px;
+  margin-bottom: 30px;
+
+  .orderedProdImgBlock, .wishedProdImgBlock {
+    max-width: 140px;
+  }
+
+  .orderedProdInfoBlock, .wishedProdInfoBlock {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+
+    .ordProdPrice {
+      align-items: flex-end;
+    }
+
+    .ordProdNameSize,
+    .ordProdPrice {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .name {
+        max-width: 90%;
+        font-size: 16px;
+        color: rgba(0, 0, 0, 0.8);
+      }
+
+      .size {
+        font-size: 14;
+        color: #808080;
+      }
+
+      .cross {
+        font-size: 24px;
+        width: 20px;
+        // transform: translate(20px, -5px);
+        cursor: pointer;
+      }
+
+      .price {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.italicFont {
+  font-family: "SaolLightItalic";
+}
+
+.poppinsFont {
+  font-family: "PoppinsLightRegular";
+  font-weight: 300;
+}
+
+.active {
+  color: rgba(0, 0, 0, 1) !important;
+}
+
+.versaceLogoWrapper {
+  width: 100%;
+
+  .versaceLogoBlock {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.shirtCardWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1400px;
+  // justify-content: space-between;
+
+  .shirtCard {
+    width: 420px;
+    text-align: center;
+    cursor: pointer;
+    // flex-grow: 1;
+    margin: 50px 10px 0;
+
+    .shirtImgBlock {
+      width: 100%;
+    }
+
+    .shirtTitleBlock {
+      text-transform: uppercase;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 30px 0 7px;
+    }
+
+    &:nth-child(7),
+    &:nth-child(8) {
+      width: 47%;
+      flex-grow: 1;
+
+    }
+  }
+}
+
+@media screen and (min-width: 1335px) {
+  .shirtCardWrapper {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 1335px) {
+  .shirtCardWrapper {
+    justify-content: space-evenly;
+
+    .shirtCard {
+      width: 330px;
+
+      &:nth-child(7),
+      &:nth-child(8) {
+        width: 330px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+
+
+  .container {
+    padding: 0 0;
+  }
+
+  .wrapper {
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .shirtCardWrapper {
+    justify-content: space-evenly;
+
+    .shirtCard {
+      width: 285px;
+      flex-grow: 1;
+
+      &:nth-child(7),
+      &:nth-child(8) {
+        width: 285px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .versaceLogoWrapper {
+    .versaceLogoBlock {
+      width: 90px;
+      height: 90px;
+    }
+  }
+
+  .shirtCardWrapper {
+    justify-content: space-evenly;
+
+    .shirtCard {
+      width: 225px;
+
+      &:nth-child(7),
+      &:nth-child(8) {
+        width: 225px;
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper {
+    padding: 0 12px;
+
+    .shirtCardWrapper {
+      justify-content: space-evenly;
+
+      .shirtCard {
+        width: 100%;
+
+        &:nth-child(7),
+        &:nth-child(8) {
+          width: 100%;
+
+        }
+      }
+    }
+  }
+
+  .orderedProd, .wishedProd {
+    height: 160px;
+    margin-bottom: 30px;
+  
+    .orderedProdImgBlock, .wishedProdImgBlock {
+      max-width: 110px;
+    }
+  
+    .orderedProdInfoBlock, .wishedProdInfoBlock {
+      margin-left: 10px;
+  
+      .ordProdNameSize,
+      .ordProdPrice {
+  
+        .name {
+          font-size: 14px;
+        }
+  
+        .size {
+          font-size: 13px;
+        }
+  
+        .cross {
+          font-size: 24px;
+          width: 20px;
+          // transform: translate(20px, -5px);
+          cursor: pointer;
+        }
+  
+        .price {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .versaceLogoWrapper {
+    .versaceLogoBlock {
+      width: 70px;
+      height: 70px;
+    }
+  }
+}

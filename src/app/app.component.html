@@ -1,0 +1,7 @@
+<app-header (fromHeader)="showBackdrop($event)"></app-header>
+
+<div class="backdrop" *ngIf="backdrop"></div>
+
+<router-outlet></router-outlet>
+
+<app-footer></app-footer>

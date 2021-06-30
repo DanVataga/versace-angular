@@ -1,0 +1,41 @@
+<div class="childrenClothingHeading">
+
+  <div class="versaceLogoWrapper">
+    <div class="versaceLogoBlock">
+      <svg class="versaceLogo">
+        <use xlink:href="../../assets/sprite.svg#versaceLogo"></use>
+      </svg>
+    </div>
+  </div>
+
+  <div class="childrenClothingTitleWrapper">
+    <div class="childrenClothingTitleBlock">
+      <h1>printed <span class="italicFont">designs</span><br>
+        — collection</h1>
+    </div>
+  </div>
+
+  <div class="childrenClothingImgBlock">
+    <img src="../../../assets/img/children-clothing/jumper_auto_x2.jpg" alt="children-clothing">
+  </div>
+
+</div>
+
+<div class="wrapper">
+
+  <div class="shirtCardWrapper">
+    <div class="shirtCard" *ngFor="let pr of products" [routerLink]="[ '/clothes/'+pr.categoryName, pr.id ]">
+      <div class="shirtImgBlock">
+        <img [src]="pr.image" alt="Product Photo">
+      </div>
+
+      <div class="shirtTitleBlock">
+        <p>{{ pr.name }}</p>
+      </div>
+
+      <div class="shirtPriceBlock">
+        <p class="italicFont">{{ pr.price }} $</p>
+      </div>
+    </div>
+  </div>
+</div>

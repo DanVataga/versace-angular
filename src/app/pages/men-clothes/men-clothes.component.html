@@ -1,0 +1,75 @@
+<div class="mensShirtsHeading">
+
+  <div class="versaceLogoWrapper">
+    <div class="versaceLogoBlock">
+      <svg class="versaceLogo">
+        <use xlink:href="../../assets/sprite.svg#versaceLogo"></use>
+      </svg>
+    </div>
+  </div>
+
+  <div class="mensShirtsTitleWrapper">
+    <div class="mensShirtsTitleBlock">
+      <h1>men’s <span class="italicFont">shirts</span><br>
+        — collection</h1>
+    </div>
+  </div>
+
+  <div class="mensShirtsImgBlock">
+    <img src="../../../assets/img/mens-shirts/main-shirt.png" alt="Men’s-shirt">
+  </div>
+
+  <div class="mensShirtsSubtitleWrapper">
+    <div class="mensShirtsSubtitleBlock">
+      <p>Crafted from smooth silk or cotton, Versace shirts for men bring elegance and personality. Various designs
+        are enhanced by bold prints and heritage. Crisp formal button shirts complete a business formal or casual
+        look
+        when paired with a blazer or tie.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="container"> -->
+<div class="wrapper">
+  <div class="shirtCardWrapper">
+    <div class="shirtCard" *ngFor="let pr of products" [routerLink]="[ '/clothes/'+pr.categoryName, pr.id ]">
+      <div class="shirtImgBlock">
+        <img [src]="pr.image" alt="Product Photo">
+      </div>
+
+      <div class="shirtTitleBlock">
+        <p>{{ pr.name }}</p>
+      </div>
+
+      <div class="shirtPriceBlock">
+        <p class="italicFont">{{ pr.price }} $</p>
+      </div>
+    </div>
+  </div>
+
+  
+
+
+  <!-- <app-product-card></app-product-card> -->
+
+  <!-- <div class="shirtCardWrapper">
+
+      <div class="shirtCard" *ngFor="let card of shirtCardArray">
+        <div class="shirtImgBlock">
+          <img [src]="card.image" alt="Product Photo">
+        </div>
+
+        <div class="shirtTitleBlock">
+          <p>{{ card.name }}</p>
+        </div>
+
+        <div class="shirtPriceBlock">
+          <p class="italicFont">{{card.price}} $</p>
+        </div>
+      </div>
+    </div> -->
+</div>
+
+
+<!-- </div> -->

@@ -1,0 +1,54 @@
+.addProductWrapper {
+
+  .addProductBlock {
+    padding: 0 15px;
+
+    .productSelectCategory {
+      select {
+        padding: 5px 0;
+      }
+    }
+
+    .productNameBlock,
+    .productDescriptionBlock {
+      input {
+        width: 100%;
+      }
+    }
+
+    .productBlock {
+      margin-top: 25px;
+
+      label {
+        display: block;
+      }
+
+      input {
+        display: block;
+      }
+    }
+
+    .productBtnBlock {
+      max-width: 400px;
+      margin-top: 20px;
+
+      button {
+        padding: 15px 0;
+      }
+    }
+  }
+
+  .productsList {
+
+    .productTable {
+      td {
+        padding: 5px;
+
+        input[type="button"] {
+          text-transform: none;
+        }
+      }
+    }
+  }
+
+}

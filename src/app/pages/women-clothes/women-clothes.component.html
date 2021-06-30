@@ -1,0 +1,42 @@
+<div class="womensClothingHeading">
+
+  <div class="versaceLogoWrapper">
+    <div class="versaceLogoBlock">
+      <svg class="versaceLogo">
+        <use xlink:href="../../assets/sprite.svg#versaceLogo"></use>
+      </svg>
+    </div>
+  </div>
+
+  <div class="womenClothingTitleWrapper">
+    <div class="womenClothingTitleBlock">
+      <h1>timeless <span class="italicFont">style</span><br>
+        — collection</h1>
+    </div>
+  </div>
+
+  <div class="womenClothingImgBlock">
+    <img src="../../../assets/img/women-colting/women-bg.jpg" alt="Women-cloting">
+  </div>
+
+
+</div>
+
+<div class="wrapper">
+
+  <div class="shirtCardWrapper">
+    <div class="shirtCard" *ngFor="let pr of products" [routerLink]="[ '/clothes/'+pr.categoryName, pr.id ]">
+      <div class="shirtImgBlock">
+        <img [src]="pr.image" alt="Product Photo">
+      </div>
+
+      <div class="shirtTitleBlock">
+        <p>{{ pr.name }}</p>
+      </div>
+
+      <div class="shirtPriceBlock">
+        <p class="italicFont">{{ pr.price }} $</p>
+      </div>
+    </div>
+  </div>
+</div>

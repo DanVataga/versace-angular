@@ -1,0 +1,78 @@
+.authWrapper {
+  width: 100%;
+
+  .fromsBlock {
+    width: 100%;
+
+    .froms {
+      width: 100%;
+
+      div {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+
+        input {
+          width: 250px;
+          border: none;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+          outline: none;
+          font-size: 14px;
+          padding: 10px 5px;
+
+          &::placeholder {
+            color: #505050;
+
+          }
+
+          &:nth-child(odd) {
+            margin-right: 100px;
+          }
+        }
+      }
+    }
+
+    .textareaBlock {
+      label {
+        font-size: 14px;
+        color: #505050;
+
+      }
+
+      .textarea {
+        width: 100%;
+        resize: none;
+        height: 60px;
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+        outline: none;
+      }
+    }
+
+  }
+
+  .authBtnBlock {
+    margin-top: 100px;
+
+    .agreement {
+      display: flex;
+      color: #8F8F8F;
+      align-items: center;
+      margin-bottom: 35px;
+      font-size: 14px;
+
+      span {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+
+    .authBtn {
+      width: 100%;
+
+      button {
+        padding: 20px 0;
+      }
+    }
+  }
+}

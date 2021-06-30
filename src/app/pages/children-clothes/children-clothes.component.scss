@@ -1,0 +1,106 @@
+.childrenClothingHeading {
+  max-width: 1400px;
+  margin: 0 auto;
+
+  .childrenClothingTitleWrapper {
+    width: 100%;
+    margin-bottom: -100px;
+    position: relative;
+    z-index: 1;
+
+    .childrenClothingTitleBlock {
+      max-width: 900px;
+      text-align: center;
+      margin: 70px auto;
+
+      h1 {
+        text-transform: uppercase;
+        font-family: "SaolLightRegular";
+        font-size: 90px;
+        line-height: 90%;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .childrenClothingImgBlock {
+    height: 675px;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .childrenClothingHeading {
+    .childrenClothingTitleWrapper {
+      margin-bottom: -85px;
+
+      .childrenClothingTitleBlock {
+        margin: 55px auto;
+
+        h1 {
+          font-size: 67px;
+        }
+      }
+    }
+
+    .childrenClothingImgBlock {
+      height: 550px;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .childrenClothingHeading {
+    .childrenClothingTitleWrapper {
+      margin-bottom: -85px;
+
+      .childrenClothingTitleBlock {
+        margin: 55px auto;
+
+        h1 {
+          font-size: 50px;
+        }
+      }
+    }
+
+    .childrenClothingImgBlock {
+      height: 365px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .childrenClothingHeading {
+    .childrenClothingTitleWrapper {
+      .childrenClothingTitleBlock {
+
+        h1 {
+          font-size: 40px;
+        }
+      }
+    }
+
+    .childrenClothingImgBlock {
+      height: 235px;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .childrenClothingHeading {
+    .childrenClothingTitleWrapper {
+      margin-bottom: -78px;
+
+      .childrenClothingTitleBlock {
+
+        h1 {
+          font-size: 34px;
+        }
+      }
+    }
+
+    .childrenClothingImgBlock {
+      height: 205px;
+    }
+  }
+}

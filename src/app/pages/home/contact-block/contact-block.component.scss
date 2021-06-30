@@ -1,0 +1,238 @@
+.container {
+  .wrapper {
+    .contactWrapper {
+      height: 760px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      .contactBgImg {
+        position: absolute;
+      }
+
+      .contactBgImg1 {
+        bottom: 0;
+        left: 0;
+      }
+
+      .contactBgImg2 {
+        max-width: 500px;
+        top: 0;
+        right: 0;
+      }
+
+      .contactTitleWrapper {
+        z-index: 1;
+
+        .contactTitleBlock {
+          text-align: center;
+
+          .contactTitle {
+            h2 {
+              text-transform: uppercase;
+              font-family: "SaolRegular";
+              font-size: 110px;
+              line-height: 104px;
+              font-weight: normal;
+
+              span {
+                text-transform: none;
+              }
+            }
+          }
+
+          .contactBtnBlock {
+            max-width: 380px;
+            margin: 40px auto;
+
+            button {
+              padding: 19px 0;
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    .wrapper {
+      .contactWrapper {
+        height: 650px;
+
+        .contactBgImg1 {
+          max-width: 270px;
+        }
+
+        .contactBgImg2 {
+          max-width: 370px;
+        }
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    .wrapper {
+      .contactWrapper {
+        height: 600px;
+
+        .contactBgImg1 {
+          max-width: 240px;
+        }
+
+        .contactBgImg2 {
+          max-width: 340px;
+        }
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .container {
+    .wrapper {
+      .contactWrapper {
+        height: 600px;
+
+        .contactBgImg1 {
+          max-width: 220px;
+        }
+
+        .contactBgImg2 {
+          max-width: 300px;
+        }
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    .wrapper {
+      .contactWrapper {
+        height: 825px;
+
+        .contactBgImg1 {
+          max-width: 240px;
+        }
+
+        .contactBgImg2 {
+          max-width: 300px;
+        }
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    .wrapper {
+      .contactWrapper {
+        height: 780px;
+
+        .contactBgImg1 {
+          max-width: 240px;
+        }
+
+        .contactBgImg2 {
+          max-width: 300px;
+        }
+
+        .contactTitleWrapper {
+          .contactTitleBlock {
+
+            .contactTitle {
+              h2 {
+                font-size: 85px;
+                line-height: 77px;
+              }
+            }
+
+          }
+        }
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    .wrapper {
+      .contactWrapper {
+        height: 580px;
+
+        .contactBgImg1 {
+          max-width: 160px;
+        }
+
+        .contactBgImg2 {
+          max-width: 200px;
+        }
+
+        .contactTitleWrapper {
+          .contactTitleBlock {
+
+            .contactTitle {
+              h2 {
+                font-size: 75px;
+                line-height: 70px;
+              }
+            }
+
+          }
+        }
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    .wrapper {
+      .contactWrapper {
+        height: 480px;
+
+        .contactBgImg1 {
+          max-width: 135px;
+        }
+
+        .contactBgImg2 {
+          max-width: 160px;
+        }
+
+        .contactTitleWrapper {
+          .contactTitleBlock {
+
+            .contactTitle {
+              h2 {
+                font-size: 55px;
+                line-height: 53px;
+              }
+            }
+
+            .contactBtnBlock {
+              margin: 20px auto;
+  
+              button {
+                padding: 13px 0;
+              }
+            }
+
+          }
+        }
+
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+<div class="productDetailsWrapper">
+
+  <div class="productDetailsImgBlock">
+    <img [src]="view?.image" alt="product-photo">
+  </div>
+
+  <div class="productDetailsInfoWrapper">
+    <div class="productDetailsInfoBlock">
+
+      <h3 class="backBtn" (click)="back()">Back</h3>
+
+      <h2 class="productDetailsTitle">{{view?.name}}</h2>
+
+      <span class="productDetailsPrice italicFont">{{view?.price}} $</span>
+
+      <p class="productDetailsDescription">{{view?.description}}</p>
+
+      <div class="productDetailsSizeBlock">
+        <span>Size guide</span>
+
+        <ul class="productDetailsSizeList">
+          <li *ngFor="let prodSize of sizeList; let i = index" (click)="addActive($event)">
+            <!-- <input type="radio" name="size" id="{{i}}">
+            <label for="{{i}}">{{ prodSize.size }} </label> -->
+            {{prodSize.size}}
+          </li>
+          <!-- <li (click)="addActive()" [ngClass]="{'active': active}">37</li> -->
+        </ul>
+
+        <div class="productDetailsBtnBlock">
+          <button (click)="addToBasket()">
+            add to bag
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>

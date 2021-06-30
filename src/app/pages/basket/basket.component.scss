@@ -1,0 +1,85 @@
+.basketWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  .orderedProdsWrapper {
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+
+    // .orderedProd {
+    //   width: 100%;
+    //   display: flex;
+    //   height: 200px;
+    //   margin-bottom: 30px;
+
+    //   .orderedProdImgBlock {
+    //     max-width: 140px;
+    //   }
+
+    //   .orderedProdInfoBlock {
+    //     width: 100%;
+    //     display: flex;
+    //     justify-content: space-between;
+    //     margin-left: 20px;
+
+    //     .ordProdNameSize,
+    //     .ordProdPrice {
+    //       display: flex;
+    //       flex-direction: column;
+    //       justify-content: space-between;
+
+    //       .name {
+    //         max-width: 90%;
+    //         font-size: 16px;
+    //         color: rgba(0, 0, 0, 0.8);
+    //       }
+
+    //       .size {
+    //         font-size: 14;
+    //         color: #808080;
+    //       }
+
+    //       .cross {
+    //         font-size: 24px;
+    //         transform: translate(20px, -5px);
+    //         cursor: pointer;
+    //       }
+
+    //       .price {
+    //         font-size: 20px;
+    //       }
+    //     }
+    //   }
+    // }
+  }
+
+  .checkoutWrapper {
+    width: 100%;
+
+    .orderSubtotal {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin: 30px 0;
+
+      .subtotal {
+        font-size: 16px;
+      }
+
+      .subtotalPrice {
+        font-size: 20px;
+      }
+    }
+
+    .checkoutBtn {
+      width: 100%;
+
+      button {
+        padding: 23px 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,260 @@
+.headerWrapper {
+  display: flex;
+  padding: 60px 0;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+
+  .logoNavbarWrapper {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      height: 30px;
+
+      .logoSvg {
+        width: 187px;
+        height: 30px;
+      }
+    }
+
+    .navbar {
+      margin-left: 90px;
+
+      ul {
+        display: flex;
+
+        li {
+          margin-right: 50px;
+
+          a {
+            text-transform: uppercase;
+            color: rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            transition: color .3s ease;
+            font-size: 14px;
+            line-height: 21px;
+
+            &:hover {
+              color: rgba(0, 0, 0, 1);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .dropdown {
+    width: 37px;
+    height: 19px;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+
+    &:focus-visible,
+    &:focus {
+      outline: none;
+      background-color: none;
+    }
+
+    .dropdownContent {
+      z-index: 2;
+      position: absolute;
+      top: 30px;
+      background-color: #fff;
+      padding: 10px;
+      left: -88px;
+      border: 1px solid rgba(0, 0, 0, 0.5);
+
+      ul {
+        .listSvgService {
+          display: none;
+        }
+
+        li {
+          padding: 15px 10px;
+
+          a {
+            color: #000;
+            text-transform: uppercase;
+            cursor: pointer;
+            font-size: 18px;
+            line-height: 21px;
+          }
+
+          .basket {
+            display: flex;
+          }
+        }
+      }
+    }
+
+    .upperLine,
+    .lowerLine {
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: #000;
+    }
+  }
+
+  .services {
+    display: flex;
+
+    .basket {
+      display: flex;
+    }
+  }
+
+  .svgService {
+    height: 23px;
+    width: 28px;
+    margin-right: 38px;
+    user-select: none;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+  }
+}
+
+.servicesSideWrapper {
+  position: fixed;
+  width: 55%;
+  height: 100%;
+  // background-color: rgba(0, 0, 0, .5);
+  background-color: #fff;
+  transition: right .5s cubic-bezier(0.5, 1, 0.89, 1);
+  right: -60%;
+  top: 0;
+  z-index: 2;
+  overflow: auto;
+
+  .closeSideCrossBlock {
+    width: 100%;
+    padding: 0 70px;
+    display: flex;
+    justify-content: flex-end;
+    margin: 50px 0 65px;
+    align-items: center;
+    justify-content: space-between;
+
+    h3 {
+      // font-family: "SaolRegular";
+      font-size: 30px;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+
+    .sideCross {
+      font-size: 33px;
+      cursor: pointer;
+    }
+  }
+
+}
+
+
+
+.sideContentWrapper {
+  margin: 0 70px 70px;
+  height: 100vh;
+}
+
+@media screen and (max-width: 1000px) {
+  .headerWrapper {
+    padding: 60px 15px;
+
+    .logoNavbarWrapper {
+      .logo {
+        .logoSvg {
+          width: 157px;
+        }
+      }
+
+      .navbar {
+        margin-left: 50px;
+
+        ul {
+          li {
+            margin-right: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  .servicesSideWrapper {
+    width: 100%;
+    right: -105%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .headerWrapper {
+    padding: 53px 15px;
+    z-index: 2;
+
+    .logoNavbarWrapper {
+      .navbar {
+        display: none;
+      }
+    }
+
+    .dropdown {
+      display: flex;
+      margin-left: 80px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .headerWrapper {
+    padding: 35px 12px;
+
+    .dropdown {
+      display: flex;
+      margin-left: 80px;
+
+      .dropdownContent {
+        ul {
+
+          .listSvgService {
+            display: flex;
+          }
+        }
+      }
+    }
+
+    .services {
+      display: none;
+    }
+  }
+
+  .servicesSideWrapper {
+    .closeSideCrossBlock {
+      padding: 0 15px;
+    }
+  }
+
+  .sideContentWrapper {
+    margin: 0 15px 40px;
+    height: 100vh;
+  }
+}
+
+.showSideMenu {
+  right: 0;
+}

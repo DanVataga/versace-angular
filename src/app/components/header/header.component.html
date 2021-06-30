@@ -1,0 +1,109 @@
+<div class="container">
+  <div class="headerWrapper">
+    <div class="logoNavbarWrapper">
+      <div class="logo">
+        <svg class="logoSvg">
+          <use xlink:href="../../assets/sprite.svg#logo"></use>
+        </svg>
+      </div>
+      <div class="navbar">
+        <ul>
+          <li>
+            <a [routerLink]="[ '/home' ] " routerLinkActive="active">home</a>
+          </li>
+          <li>
+            <a [routerLink]="[ '/clothes/', 'women-clothes']" routerLinkActive="active">women</a>
+          </li>
+          <li>
+            <a [routerLink]="[ '/clothes/', 'men-clothes' ]" routerLinkActive="active">men</a>
+          </li>
+          <li>
+            <a [routerLink]="[ '/clothes/', 'children-clothes' ]" routerLinkActive="active">children</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="dropdown" (click)="showDropdownMenu()">
+      <div class="upperLine"></div>
+      <div class="lowerLine"></div>
+      <div class="dropdownContent" *ngIf="dropdownContentVisible">
+        <ul>
+          <li>
+            <a [routerLink]="[ '/home' ]">home</a>
+          </li>
+          <li>
+            <a [routerLink]="[ '/clothes/', 'women-clothes']">women</a>
+          </li>
+          <li>
+            <a [routerLink]="[ '/clothes/', 'men-clothes' ]">men</a>
+          </li>
+          <li>
+            <a [routerLink]="[ '/clothes/', 'children-clothes' ]">children</a>
+          </li>
+          <li class="listSvgService">
+            <div class="auth svgService" (click)="show('Authentication')" (click)="showBackdrop()" 
+              [routerLink]="[ { outlets: { popUp: ['auth'] } } ]">
+              <svg class="authSvg">
+                <use xlink:href="../../assets/sprite.svg#auth"></use>
+              </svg>
+            </div>
+          </li>
+          <li class="listSvgService">
+            <div class="liked svgService" (click)="show('Wishlist')" (click)="showBackdrop()"
+            [routerLink]="[ { outlets: { popUp: ['wishlist'] } } ]">
+              <svg class="likedSvg">
+                <use xlink:href="../../assets/sprite.svg#liked"></use>
+              </svg>
+            </div>
+          </li>
+          <li class="listSvgService">
+            <div class="basket svgService" (click)="show('Basket')" (click)="showBackdrop()"
+            [routerLink]="[ { outlets: { popUp: ['basket'] } } ]">
+              <svg class="basketSvg">
+                <use xlink:href="../../assets/sprite.svg#basket"></use>
+              </svg>
+              <span>1</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="services">
+      <div class="auth svgService" (click)="show('Authentication')" (click)="showBackdrop()" 
+        [routerLink]="[ { outlets: { popUp: ['auth'] } } ]">
+        <svg class="authSvg">
+          <use xlink:href="../../assets/sprite.svg#auth"></use>
+        </svg>
+      </div>
+      <div class="liked svgService" (click)="show('Wishlist')" (click)="showBackdrop()"
+        [routerLink]="[ { outlets: { popUp: ['wishlist'] } } ]">
+        <svg class="likedSvg">
+          <use xlink:href="../../assets/sprite.svg#liked"></use>
+        </svg>
+      </div>
+      <!-- <div class="basket svgService" (click)="show()" [routerLink]="[ { outlets: { popUp: ['pop-up', 'basket'] } } ]"> -->
+      <div class="basket svgService" (click)="show('Basket')" (click)="showBackdrop()"
+        [routerLink]="[ { outlets: { popUp: ['basket'] } } ]">
+        <svg class="basketSvg">
+          <use xlink:href="../../assets/sprite.svg#basket"></use>
+        </svg>
+        <span>1</span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="servicesSideWrapper" [ngClass]="{'showSideMenu': showSideMenu}">
+    <div class="closeSideCrossBlock">
+      <h3>{{serviceCategory}}</h3>
+      <span class="sideCross" (click)="show('Basket')" (click)="showBackdrop()">&#10005;</span>
+    </div>
+
+    <div class="sideContentWrapper">
+      <router-outlet name="popUp"></router-outlet>
+    </div>
+  </div>
+</div>
+<!-- <div class="popupContainer">
+  <app-pop-up [openSideMenu]="fromParent"></app-pop-up>
+</div> -->

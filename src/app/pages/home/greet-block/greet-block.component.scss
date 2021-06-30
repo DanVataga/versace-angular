@@ -1,0 +1,129 @@
+.mainTitleWrapper {
+  width: 100%;
+  margin-bottom: -100px;
+  position: relative;
+  // z-index: 1;
+
+  .mainTitleBlock {
+    max-width: 900px;
+    text-align: center;
+    margin: 70px auto;
+
+
+    h1 {
+      text-transform: uppercase;
+      font-family: "SaolRegular";
+      font-size: 90px;
+      line-height: 90%;
+      font-weight: 400;
+
+      span {
+        text-transform: none;
+      }
+    }
+  }
+}
+
+.sliderWrapper {
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+
+  .sliderBlock {
+    display: flex;
+    align-items: center;
+
+    .slide {
+      margin: 0 35px;
+
+      &:first-child {
+        margin: 0 35px 0 -35px;
+      }
+
+      &:last-child {
+        margin: 0 -35px 0 35px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+
+  .mainTitleWrapper {
+    .mainTitleBlock {
+      h1 {
+        font-size: 71px;
+      }
+    }
+  }
+
+  .sliderWrapper {  
+    .sliderBlock {
+      .slide {
+        margin: 0 15px;
+  
+        &:first-child {
+          margin: 0 15px 0 0;
+        }
+  
+        &:last-child {
+          margin: 0 0 0 15px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+
+  
+
+  .mainTitleWrapper {
+    margin-bottom: -85px;
+  
+    .mainTitleBlock {
+      margin: 55px auto;
+  
+      h1 {
+        font-size: 55px;
+      }
+    }
+  }
+
+  .sliderWrapper {  
+    .sliderBlock {
+
+      .slide {
+        margin: 0 10px;
+  
+        &:first-child {
+          display: none;
+        }
+  
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+
+  
+
+  .sliderWrapper {  
+    .sliderBlock {
+      .slide2 {
+        margin: 0 6px 0 -35px;
+      }
+
+      .slide4 {
+        margin: 0 -35px 0 6px;
+      }
+    }
+  }
+}
+
+

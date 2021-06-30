@@ -1,0 +1,126 @@
+.donatellaWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+
+  .donatellaTextWrapper {
+    width: 50%;
+    display: flex;
+    align-items: center;
+
+    .donatellaTextBlock {
+
+      .donTitleBlock {
+        h2 {
+          font-family: "SaolRegular";
+          font-size: 60px;
+          line-height: 115%;
+          text-transform: uppercase;
+          font-weight: normal;
+        }
+      }
+
+      .donRevBlock {
+        max-width: 400px;
+        margin-top: 50px;
+
+        p {
+          color: rgba(0, 0, 0, 0.8);
+          font-size: 14px;
+          line-height: 170%;
+        }
+      }
+    }
+  }
+
+  .donatellaImgWrapper {
+    width: 50%;
+
+    .donatellaImgBlock {
+      display: flex;
+      justify-content: flex-end;
+      position: relative;
+
+      .donImg1 {
+        max-width: 300px;
+        margin-right: -40px;
+        transform: translate(0, 18%);
+      }
+
+    }
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+
+  .donatellaTextWrapper {
+    .donatellaTextBlock {
+      .donTitleBlock {
+        h2 {
+          font-size: 55px;
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 740px) {
+  .donatellaWrapper {
+    flex-direction: column;
+
+    .donatellaTextWrapper {
+      width: 100%;
+    }
+
+    .donatellaImgWrapper {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 40px;
+
+      .donatellaImgBlock {
+        width: 80%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+
+  .donatellaWrapper {
+    .donatellaTextWrapper {
+      .donatellaTextBlock {
+
+        .donTitleBlock {
+          h2 {
+            font-size: 40px;
+          }
+        }
+
+        .donRevBlock {
+          margin-top: 35px;
+
+          p {
+            color: rgba(0, 0, 0, 0.8);
+            font-size: 14px;
+            line-height: 170%;
+          }
+        }
+      }
+    }
+
+    .donatellaImgWrapper {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 35px;
+
+      .donatellaImgBlock {
+        width: 100%;
+      }
+    }
+  }
+
+}
