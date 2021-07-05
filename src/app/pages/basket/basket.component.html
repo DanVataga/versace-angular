@@ -1,113 +1,36 @@
 <div class="basketWrapper">
   <div class="orderedProdsWrapper">
 
-    <div class="orderedProd">
+    <div class="orderedProd" *ngFor="let pr of basketArr; let i = index">
       <div class="orderedProdImgBlock">
-        <img src="../../../assets/img/mens-shirts/6.png" alt="Ordered Product">
+        <img [src]="pr.image" alt="Ordered Product">
       </div>
 
       <div class="orderedProdInfoBlock">
         <div class="ordProdNameSize">
-          <p class="name">BAROCCO MOSAIC PRINT SILK shirt</p>
+          <p class="name">{{pr.name}}</p>
 
-          <span class="size">Size: 44</span>
+          <span class="size">Size: {{pr.size}}</span>
         </div>
 
         <div class="ordProdPrice">
-          <span class="cross">&#10005;</span>
+          <span class="cross" (click)="deleteProd(pr)">&#10005;</span>
 
-          <span class="italicFont price">1700$</span>
+          <span class="italicFont price">{{pr.price}}$</span>
         </div>
       </div>
     </div>
 
-    <!-- <div class="orderedProd">
-      <div class="orderedProdImgBlock">
-        <img src="../../../assets/img/mens-shirts/6.png" alt="Ordered Product">
-      </div>
-
-      <div class="orderedProdInfoBlock">
-        <div class="ordProdNameSize">
-          <p class="name">BAROCCO MOSAIC PRINT SILK shirt</p>
-
-          <span class="size">Size: 44</span>
-        </div>
-
-        <div class="ordProdPrice">
-          <span class="cross">&#10005;</span>
-
-          <span class="italicFont price">1700$</span>
-        </div>
-      </div>
-    </div>
-    
-    <div class="orderedProd">
-      <div class="orderedProdImgBlock">
-        <img src="../../../assets/img/mens-shirts/6.png" alt="Ordered Product">
-      </div>
-
-      <div class="orderedProdInfoBlock">
-        <div class="ordProdNameSize">
-          <p class="name">BAROCCO MOSAIC PRINT SILK shirt</p>
-
-          <span class="size">Size: 44</span>
-        </div>
-
-        <div class="ordProdPrice">
-          <span class="cross">&#10005;</span>
-
-          <span class="italicFont price">1700$</span>
-        </div>
-      </div>
-    </div>
-    
-    <div class="orderedProd">
-      <div class="orderedProdImgBlock">
-        <img src="../../../assets/img/mens-shirts/6.png" alt="Ordered Product">
-      </div>
-
-      <div class="orderedProdInfoBlock">
-        <div class="ordProdNameSize">
-          <p class="name">BAROCCO MOSAIC PRINT SILK shirt</p>
-
-          <span class="size">Size: 44</span>
-        </div>
-
-        <div class="ordProdPrice">
-          <span class="cross">&#10005;</span>
-
-          <span class="italicFont price">1700$</span>
-        </div>
-      </div>
-    </div>
-    
-    <div class="orderedProd">
-      <div class="orderedProdImgBlock">
-        <img src="../../../assets/img/mens-shirts/6.png" alt="Ordered Product">
-      </div>
-
-      <div class="orderedProdInfoBlock">
-        <div class="ordProdNameSize">
-          <p class="name">BAROCCO MOSAIC PRINT SILK shirt</p>
-
-          <span class="size">Size: 44</span>
-        </div>
-
-        <div class="ordProdPrice">
-          <span class="cross">&#10005;</span>
-
-          <span class="italicFont price">1700$</span>
-        </div>
-      </div>
-    </div> -->
 
   </div>
+
+
 
   <div class="checkoutWrapper">
     <div class="orderSubtotal">
       <p class="subtotal">Subtotal:</p>
 
-      <span class="italicFont subtotalPrice">1750$</span>
+      <span class="italicFont subtotalPrice">{{summaryPrice}}$</span>
     </div>
 
     <div class="checkoutBtn">

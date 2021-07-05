@@ -1,6 +1,6 @@
 import { IBasketProd } from "../interfaces/basket.interfaces";
 
-export class Product implements IBasketProd {
+export class BasketProd implements IBasketProd {
     constructor(
         public id: number,
         public categoryName: string,

@@ -1,6 +1,8 @@
 import { Location } from '@angular/common';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { IBasketProd } from 'src/app/shared/interfaces/basket.interfaces';
+import { BasketService } from 'src/app/shared/services/basket.service';
 
 @Component({
   selector: 'app-header',
@@ -19,16 +21,18 @@ export class HeaderComponent implements OnInit {
   basketTitle: string = 'Basket';
   serviceCategory: string;
 
-  constructor(private router: Router, private location: Location) {}
+  constructor(
+    private router: Router,
+    private location: Location,
+  ) {}
 
   ngOnInit(): void {
-    // this.show();
   }
 
   showDropdownMenu(): void {
     this.dropdownContentVisible = !this.dropdownContentVisible;
   }
-  
+
   showBackdrop() {
     this.valueFromHeader = this.showSideMenu;
     this.fromHeader.emit(this.valueFromHeader);
@@ -42,7 +46,7 @@ export class HeaderComponent implements OnInit {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
-      this.location.back()
+      this.location.back();
     }
   }
 }

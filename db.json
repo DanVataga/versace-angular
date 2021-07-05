@@ -217,6 +217,56 @@
       "image": "https://firebasestorage.googleapis.com/v0/b/versace-64575.appspot.com/o/images%2F474ab9d7-a41f-4e27-ae80-6cb35bf98f97.jpeg?alt=media&token=00f32c4c-9d09-4465-b2e9-1611de72e6c2"
     }
   ],
-
-  "basket": []
+  "basket": [
+    {
+      "id": 23,
+      "categoryName": "children-clothes",
+      "name": "MEDUSA AMPLIFIED KIDS PRINT JACKET",
+      "price": 2250,
+      "image": "https://firebasestorage.googleapis.com/v0/b/versace-64575.appspot.com/o/images%2F9dc189d2-a9b0-4613-bd54-40740e3b8561.jpeg?alt=media&token=ad536860-8890-45bd-810a-bebcbb8e19ae",
+      "size": " 43 "
+    },
+    {
+      "id": 7,
+      "categoryName": "men-clothes",
+      "name": "MIXED PRINT SHIRT",
+      "price": 765,
+      "image": "https://firebasestorage.googleapis.com/v0/b/versace-64575.appspot.com/o/images%2F378f1afa-d81b-4cb9-a2fd-f4df2e449cba.png?alt=media&token=4f611361-1c8c-4f1f-8202-93ed785a428f",
+      "size": " 42 "
+    },
+    {
+      "id": 9,
+      "categoryName": "men-clothes",
+      "name": "VIRTUS ANIMALIER COTTON POPLIN SHIRT",
+      "price": 950,
+      "image": "https://firebasestorage.googleapis.com/v0/b/versace-64575.appspot.com/o/images%2Fc252949e-ffba-4e17-a159-1e069c495011.png?alt=media&token=9a7ce78e-a2be-46af-bdd1-91c7a9a9d2fb",
+      "size": " 40 "
+    },
+    {
+      "id": 10,
+      "categoryName": "men-clothes",
+      "name": "POP TEMPLE PRINT SILK SHIRT",
+      "price": 900,
+      "image": "https://firebasestorage.googleapis.com/v0/b/versace-64575.appspot.com/o/images%2F573215fc-f728-47d0-b977-018e5ad2d23d.png?alt=media&token=f6e5c4b5-7f8d-4ab1-a545-7e4fb2b10042",
+      "size": 37
+    }
+  ],
+  "wishlist": [
+    {
+      "id": 7,
+      "categoryName": "men-clothes",
+      "name": "MIXED PRINT SHIRT",
+      "price": 765,
+      "image": "https://firebasestorage.googleapis.com/v0/b/versace-64575.appspot.com/o/images%2F378f1afa-d81b-4cb9-a2fd-f4df2e449cba.png?alt=media&token=4f611361-1c8c-4f1f-8202-93ed785a428f",
+      "size": 37
+    },
+    {
+      "id": 10,
+      "categoryName": "men-clothes",
+      "name": "POP TEMPLE PRINT SILK SHIRT",
+      "price": 900,
+      "image": "https://firebasestorage.googleapis.com/v0/b/versace-64575.appspot.com/o/images%2F573215fc-f728-47d0-b977-018e5ad2d23d.png?alt=media&token=f6e5c4b5-7f8d-4ab1-a545-7e4fb2b10042",
+      "size": 37
+    }
+  ]
 }

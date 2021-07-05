@@ -1,24 +1,24 @@
 <div class="wishlistWrapper">
   <div class="wishedProds">
 
-    <div class="wishedProd">
+    <div class="wishedProd" *ngFor="let w of wishlistArr; let i=index">
 
       <div class="wishedProdImgBlock">
-        <img src="../../../assets/img/mens-shirts/7.png" alt="Ordered Product">
+        <img [src]="w.image" alt="Ordered Product">
       </div>
 
       <div class="wishedProdInfoBlock">
         <div class="ordProdNameSize">
-          <p class="name">BAROCCO MOSAIC PRINT SILK shirt</p>
+          <p class="name">{{w.name}}</p>
 
-          <span class="size">Size: 44</span>
+          <span class="size">Size: {{w.size}}</span>
         </div>
 
         <div class="ordProdPrice">
-          <span class="cross">&#10005;</span>
+          <span class="cross" (click)="deleteWishProd(i)">&#10005;</span>
 
           <div class="addToBasketBtn">
-            <button>Add to basket</button>
+            <button (click)="addToBasket(i)">Add to basket</button>
           </div>
         </div>
       </div>

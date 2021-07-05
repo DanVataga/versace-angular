@@ -20,17 +20,26 @@
 
         <ul class="productDetailsSizeList">
           <li *ngFor="let prodSize of sizeList; let i = index" (click)="addActive($event)">
-            <!-- <input type="radio" name="size" id="{{i}}">
-            <label for="{{i}}">{{ prodSize.size }} </label> -->
             {{prodSize.size}}
           </li>
-          <!-- <li (click)="addActive()" [ngClass]="{'active': active}">37</li> -->
         </ul>
+
+        
 
         <div class="productDetailsBtnBlock">
           <button (click)="addToBasket()">
             add to bag
           </button>
+        </div>
+
+        <div class="productDetailsWishBlock">
+          <div class="wishlistBlock">
+            <svg class="likedSvg" (click)="addToWishlist()">
+              <use xlink:href="../../assets/sprite.svg#liked"></use>
+            </svg>
+
+            <span (click)="addToWishlist()">Add to wislist</span>
+          </div>
         </div>
 
       </div>

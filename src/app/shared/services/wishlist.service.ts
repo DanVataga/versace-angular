@@ -2,22 +2,19 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IBasketProd } from '../interfaces/basket.interfaces';
-import { IProduct } from '../interfaces/product.interfaces';
-
 
 @Injectable({
   providedIn: 'root',
 })
-export class BasketService {
+export class WishlistService {
   private url: string;
-  private sum: number;
 
   constructor(private http: HttpClient) {
-    this.url = 'http://localhost:3000/basket';
+    this.url = 'http://localhost:3000/wishlist';
   }
 
   getOneProduct(id: number): Observable<IBasketProd> {
-    return this.http.get<IBasketProd>(`${this.url}/${id}`)
+    return this.http.get<IBasketProd>(`${this.url}/${id}`);
   }
 
   getJSONProducts(): Observable<Array<IBasketProd>> {
@@ -31,8 +28,4 @@ export class BasketService {
   deleteJSONProducts(id: number): Observable<Array<IBasketProd>> {
     return this.http.delete<Array<IBasketProd>>(`${this.url}/${id}`);
   }
-
-  // updatePrice(price: number): Observable<IBasketProd> {
-  //   return this.sum
-  // }
 }
